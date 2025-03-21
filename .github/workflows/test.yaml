@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: first step
-       run: echo "Hello World"
+       uses: actions/checkout@v4
      - name: using context
        run: echo "${{toJson(github.event_name)}}"
