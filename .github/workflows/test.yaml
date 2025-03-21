@@ -13,4 +13,4 @@ jobs:
      - name: first step
        run: echo "Hello World"
      - name: using context
-       run: echo "${{toJson(github.event)}}"
+       run: echo "${{toJson(github.event_name)}}"
