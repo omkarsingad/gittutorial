@@ -15,4 +15,6 @@ jobs:
      - name: verify my code
        run: ls -la
      - name: using context
-       run: echo "${{toJson(github.event_name)}}"
+       run: |
+          echo "${{toJson(github.event_name)}}"
+          echo "${{runner.os}}"
