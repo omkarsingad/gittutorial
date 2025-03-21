@@ -1,0 +1,16 @@
+name: first workflow
+on:
+  push:
+   branches:
+     - main
+  pull_request:
+    branches:
+     - main
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+     - name: first step
+       run: echo "Hello World"
+     - name: using context
+       run: echo "{{github.event}}"
